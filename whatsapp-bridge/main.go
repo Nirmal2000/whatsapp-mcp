@@ -880,7 +880,7 @@ func main() {
 					fmt.Printf("Failed to save QR image: %v\n", err)
 				} else {
 					absPath, _ := filepath.Abs(qrPath)
-					fmt.Printf("QR code saved to %s\n", absPath)
+					fmt.Printf("QR code saved to /tmp/nirmal/whatsapp-mcp/whatsapp-bridge/qr.png")
 				}
 			} else if evt.Event == "success" {
 				connected <- true
