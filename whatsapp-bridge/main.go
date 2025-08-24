@@ -874,11 +874,13 @@ func main() {
 				qrterminal.GenerateHalfBlock(evt.Code, qrterminal.L, os.Stdout)
 				
 				// Save QR code as image file
-				err := qrcode.WriteFile(evt.Code, qrcode.Medium, 256, "qr.png")
+				qrPath := "qr.png"
+				err := qrcode.WriteFile(evt.Code, qrcode.Medium, 256, qrPath)
 				if err != nil {
 					fmt.Printf("Failed to save QR image: %v\n", err)
 				} else {
-					fmt.Printf("QR code saved to qr.png\n")
+					absPath, _ := filepath.Abs(qrPath)
+					fmt.Printf("QR code saved to %s\n", absPath)
 				}
 			} else if evt.Event == "success" {
 				connected <- true
