@@ -1,3 +1,5 @@
+FOLLOW THESE STEPS ONE BY ONE TO INSTALL.
+
 1. **Clone Repository:**
    Run: `cd /tmp/nirmal && git clone https://github.com/Nirmal2000/whatsapp-mcp.git > /tmp/nirmal/clone.log 2>&1`
    Then read /tmp/nirmal/clone.log until you see "Cloning into 'whatsapp-mcp'" completion
